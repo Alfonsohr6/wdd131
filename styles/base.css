@@ -1,0 +1,82 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*caja para poner limites*/
+.card{
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+
+.box1{
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 1rem;
+    background-color: #003049;
+    color: aliceblue;
+}
+
+.box2{
+    margin: 1rem;
+    border: 1px solid rgb(255, 255, 255); 
+    padding: 1rem;
+    background-color: black;
+    color: aliceblue;
+}
+
+
+/*Mis fuentes de txt*/
+.romanesco-regular {
+    font-family: "Romanesco", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.road-rage-regular {
+    font-family: "Road Rage", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.nosubraya { /*Aqui se quitara el subrayado a los links*/
+
+    text-decoration: none;
+
+}
+
+
+section{
+    width: 20em;
+    text-align: center;
+    position: relative;
+}
+
+/*Navegacion */
+
+nav {
+	background-color: black;
+	margin: 0 auto;
+	max-width: 800px;
+}
+nav ul {
+	list-style-type: none;
+}
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover{
+	text-decoration:overline;
+}

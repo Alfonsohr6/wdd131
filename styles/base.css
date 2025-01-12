@@ -80,3 +80,12 @@ nav a {
 nav a:hover{
 	text-decoration:overline;
 }
+
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+}

@@ -1,5 +1,38 @@
 /*pues qui ira lo que tenga que ir*/
 
+
+body {
+    margin: 0;
+     background: #ececec;
+    font-family: 'arial', sans serif;
+}
+  
+.contenedor {
+    background: #fafafa;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 10px;
+    text-align: justify;
+}
+
+/*I want my picture be back of all.*/
+
+.flota{
+
+    float: none;
+}
+
+.contenedor img {
+    width: 100%;
+}
+  
+  
+@media (max-width:600px)  { 
+    .contenedor {
+      width: 90%;
+    }
+}
+
 footer { 
 
     margin-top: 15px;

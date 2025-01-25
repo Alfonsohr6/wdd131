@@ -3,10 +3,20 @@
 
 body {
     margin: 0;
-     background: #ececec;
+     background: #fffefe;
     font-family: 'arial', sans serif;
 }
+
+header {
+
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    background-color: #006faa;
+    color: aliceblue;
+    text-align: center;
+
+}
   
+
 .contenedor {
     background: #fafafa;
     width: 80%;
@@ -21,18 +31,22 @@ h2{
 }
 section{
 
-    padding: auto;
+    padding: 50px;
     border: #fffefe;
     background-color: #fafafad5;
+    width: 300px;
+    height: auto;
+
 }
 /*I want my picture be back of all.*/
 
 .flota{
 
-    float: none;
+    position: relative;
 }
 
-.contenedor img {
+img {
+    
     width: 100%;
 }
   

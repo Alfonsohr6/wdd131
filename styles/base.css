@@ -31,7 +31,12 @@
     color: aliceblue;
 }
 
+main{
 
+    grid-column: 1/2;
+    margin: 1rem;
+
+}
 /*Mis fuentes de txt*/
 .romanesco-regular {
     font-family: "Romanesco", system-ui;
@@ -82,17 +87,28 @@ nav a:hover{
 }
 
 .linea{
-
-    border-width: 5px solid #000;
-    text-align: justify;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: left;
 }
 
 .rigth {
     margin: 10px;
     padding: 10px;
     position:relative;
+    align-items:end;
     
 }
+
+.left {
+
+    margin: 10px;
+    padding: 10px;
+    position:relative;
+    align-items:start;
+    
+}
+
 
 footer { 
 

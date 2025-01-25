@@ -8,17 +8,17 @@
 
 /*caja para poner limites*/
 .card{
-    margin: 1rem;
+    margin: auto;
     border: 1px solid rgba(0, 0, 0, 0.1); 
-    padding: 1rem;
+    padding: auto;
     background-color: #ffffff;
     color: #000;
+    
 }
 
 .box1{
-    margin: 1rem;
+
     border: 1px solid rgba(0, 0, 0, 0.1); 
-    padding: 1rem;
     background-color: #003049;
     color: aliceblue;
 }

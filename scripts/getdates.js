@@ -1,9 +1,10 @@
-
+window.onload = function(){
 // intento conseguir el año 
-const year = document.querySelector("#currentyear");
+const currentYear = new Date().getFullYear();
+document.getElementById("currentYear").innerHTML = currentYear;
 
-const today = new Date();
+//Ultima modificacion.
 
-year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-
-//
+const lastModified = document.lastModified;
+document.getElementById("lastModified").innerHTML = "Last upated: " + lastModified;
+}

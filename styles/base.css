@@ -16,6 +16,8 @@
     
 }
 
+
+
 .box1{
 
     border: 1px solid rgba(0, 0, 0, 0.1); 
@@ -96,7 +98,7 @@ nav a:hover{
     margin: 10px;
     padding: 10px;
     position:relative;
-    align-items:end;
+    grid-column: 2/2;
     
 }
 
@@ -105,7 +107,7 @@ nav a:hover{
     margin: 10px;
     padding: 10px;
     position:relative;
-    align-items:start;
+    grid-column: 1/2;
     
 }
 

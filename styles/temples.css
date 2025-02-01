@@ -1,0 +1,52 @@
+/*Aqui programando la navegacion*/
+
+.nosubraya { /*Aqui se quitara el subrayado a los links*/
+
+    text-decoration: none;
+
+}
+
+
+/*Navegacion */
+
+nav {
+	background-color: black;
+	margin: 0 auto;
+	max-width: auto;
+}
+nav ul {
+	list-style-type: none;
+}
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover{
+	text-decoration:overline;
+}
+
+/*Pie de pagina*/
+footer { 
+
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
+/*galeria*/
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .galeria img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }

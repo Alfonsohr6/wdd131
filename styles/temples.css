@@ -5,7 +5,14 @@
     text-decoration: none;
 
 }
+/*Encabezado*/
 
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
 
 /*Navegacion */
 

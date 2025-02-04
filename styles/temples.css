@@ -25,7 +25,7 @@ header h1 {
 nav {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: right;
   padding: auto;
   text-align: right;
 	margin: 0 auto;

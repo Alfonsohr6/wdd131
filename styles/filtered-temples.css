@@ -1,0 +1,78 @@
+/*Aqui programando la navegacion*/
+
+.nosubraya { /*Aqui se quitara el subrayado a los links*/
+
+    text-decoration: none;
+
+}
+/*Encabezado*/
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: plum;
+
+}
+
+header h1 {
+
+  color: #fff;
+  text-align: left;
+
+}
+
+/*Navegacion */
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: right;
+  padding: auto;
+  text-align: right;
+	margin: 0 auto;
+	max-width: auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+	list-style-type: none;
+}
+nav a {
+	display: block;
+	color: #fff;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover{
+	text-decoration:overline;
+}
+
+
+/* Ocultar el botón de menú en computadoras */
+.menu-button {
+  display: none;
+}
+
+/* Estilos generales */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+footer { 
+
+  margin-top: 15px;
+  border-top: 1px solid #000;
+  text-align: center;
+  background-color: aqua;
+}

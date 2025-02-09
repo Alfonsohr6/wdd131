@@ -1,23 +1,12 @@
-/*pues qui ira lo que tenga que ir*/
+/*So sorry the a lot comments but I need to know what myself was thinking to do this parts and 
+understand better my code and so sorry that I type that in Spanish but I need understand me, I use and apply
+the code that I understand by videos of Youtube in Spanish so sorry my issues*/
 
-
-body {
-    margin: 0;
-     background: #fffefe;
-    font-family: 'arial', sans serif;
-}
-
-header {
-
-    border: 1px solid rgba(0, 0, 0, 0.1); 
-    background-color: #006faa;
-    color: aliceblue;
-    text-align: center;
-
-}
-  
-
-.contenedor {
+/* Estilo general */
+.contenenedor {
+    display: flex;
+    flex-direction: column; /* Apilamos los elementos verticalmente por defecto */
+    align-items: center; /* Centramos los elementos horizontalmente */
     background: #fafafa;
     width: 80%;
     margin: 0 auto;
@@ -25,41 +14,49 @@ header {
     text-align: justify;
 }
 
-h2{
-    color: #000;
-    background-color: rgba(0, 255, 255, 0.822);
+.flota {
+    width: 100%; /* Aseguramos que la imagen ocupe todo el ancho disponible */
+    margin-bottom: 20px; /* Espacio entre la imagen y las secciones */
 }
-section{
 
-    padding: 50px;
-    border: #fffefe;
+section {
+    padding: 20px;
+    border: 1px solid #ccc;
     background-color: #fafafad5;
-    width: 300px;
-    height: auto;
-
-}
-/*I want my picture be back of all.*/
-
-.flota{
-
-    position: relative;
+    width: 100%; /* Aseguramos que las secciones ocupen todo el ancho disponible */
+    margin-bottom: 20px; /* Espacio entre las secciones */
 }
 
-img {
-    
-    width: 100%;
-}
-  
-  
-@media (max-width:600px)  { 
-    .contenedor {
-      width: 90%;
+/* Orden en pantallas grandes (computadoras) */
+@media (min-width: 601px) {
+    .contenenedor {
+        flex-direction: row; /* Colocamos los elementos en fila */
+        flex-wrap: wrap; /* Permitimos que los elementos se ajusten al ancho */
+        justify-content: space-between; /* Espacio entre los elementos */
+    }
+
+    .flota {
+        order: 2; /* La imagen va después de las secciones */
+        width: 48%; /* Ancho de la imagen */
+    }
+
+    section {
+        order: 1; /* Las secciones van antes de la imagen */
+        width: 48%; /* Ancho de las secciones */
     }
 }
 
-footer { 
+/* Orden en pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+    .contenenedor {
+        flex-direction: column; /* Apilamos los elementos verticalmente */
+    }
 
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+    .flota {
+        order: 1; /* La imagen va primero */
+    }
+
+    section {
+        order: 2; /* Las secciones van después */
+    }
 }

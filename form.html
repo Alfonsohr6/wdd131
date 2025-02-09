@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <script src="scripts/form.js" defer></script>
+    <title>WDD 131 - Fundamentos de la Web dinámica - Alfonso Habana Rosales</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WDD 131 - Fundamentos Web Dinámicos, I'm Alfonso Hababa Rosales, I study in BYU, this page is my practice to learn HTML, CSS and JavaScript code.">
+    <meta name="author" content="Alfonso Habana Rosales">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <!-- Nombre del producto -->
+            <div>
+                <label for="product">Select a Product:</label>
+                <select id="product" name="product" required>
+                    <option disabled selected value="">Select a product...</option>
+                    <!-- Las opciones se generarán dinámicamente con JavaScript -->
+                </select>
+            </div>
+
+            <!-- Calificación general -->
+            <div>
+                <label>Overall Rating:</label>
+                <div>
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1">1</label>
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    <label for="rating2">2</label>
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    <label for="rating3">3</label>
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    <label for="rating4">4</label>
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    <label for="rating5">5</label>
+                </div>
+            </div>
+
+            <!-- Fecha de instalación -->
+            <div>
+                <label for="installationDate">Installation Date:</label>
+                <input type="date" id="installationDate" name="installationDate" required>
+            </div>
+
+            <!-- Características útiles -->
+            <div>
+                <label>Useful Features:</label>
+                <div>
+                    <input type="checkbox" id="feature1" name="features" value="Feature 1">
+                    <label for="feature1">Feature 1</label>
+                    <input type="checkbox" id="feature2" name="features" value="Feature 2">
+                    <label for="feature2">Feature 2</label>
+                    <input type="checkbox" id="feature3" name="features" value="Feature 3">
+                    <label for="feature3">Feature 3</label>
+                </div>
+            </div>
+
+            <!-- Reseña escrita -->
+            <div>
+                <label for="review">Written Review:</label>
+                <textarea id="review" name="review"></textarea>
+            </div>
+
+            <!-- Nombre de usuario -->
+            <div>
+                <label for="username">Username (Optional):</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <!-- Botón de envío -->
+            <div>
+                <input type="submit" value="Submit Review">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>©️ <span id="currentYear"></span></p>
+        <p>Alfonso Habana Rosales, Mexico, Mexico</p>
+        <p><span id="lastModified"></span></p>
+     </footer>
+    
+    </body>
+</html>

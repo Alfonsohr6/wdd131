@@ -73,11 +73,20 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.galeria figure {
+  border: 2px solid black; /* Borde negro */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 
 footer { 
 
   margin-top: 15px;
   border-top: 1px solid #000;
   text-align: center;
-  background-color: aqua;
+  background-color: plum;
 }
+

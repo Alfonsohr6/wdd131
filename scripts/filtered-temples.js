@@ -15,10 +15,8 @@ window.onload = function () {
     function loadCSS() {
         const cssLink = document.getElementById("dynamic-css");
         if (window.matchMedia("(max-width: 600px)").matches) {
-            // Si el ancho es menor o igual a 600px (celular)
             cssLink.href = "styles/filtered-temples-large.css";
         } else {
-            // Si el ancho es mayor a 600px (computadora)
             cssLink.href = "styles/filtered-temples.css";
         }
     }
@@ -35,7 +33,7 @@ window.onload = function () {
         menu.classList.toggle("active");
     }
 
-    // Cargar la galería dinámicamente
+    // Datos de los templos
     const temples = [
         {
             templeName: "Payson Utah",
@@ -43,80 +41,109 @@ window.onload = function () {
             dedicated: "2015, June, 7",
             area: 96630,
             imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg "
-            },
-            {
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+        },
+        {
             templeName: "Yigo Guam",
             location: "Yigo, Guam",
             dedicated: "2020, May, 2",
             area: 6861,
             imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg "
-            },
-            {
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+        },
+        {
             templeName: "Washington D.C.",
             location: "Kensington, Maryland, United States",
             dedicated: "1974, November, 19",
             area: 156558,
             imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg "
-            },
-            {
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+        },
+        {
             templeName: "Lima Perú",
             location: "Lima, Perú",
             dedicated: "1986, January, 10",
             area: 9600,
             imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg "
-            },
-            {
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+        },
+        {
             templeName: "Mexico City Mexico",
             location: "Mexico City, Mexico",
             dedicated: "1983, December, 2",
             area: 116642,
             imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg "
-            },
-            // Add more temple objects here...
-            {
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+        },
+        {
             templeName: "Arequipa Peru Temple",
             location: "Arequipa, Arequipa,Peru",
             dedicated: "2019, December, 15",
             area: 26969,
             imageUrl:
-            "https://churchofjesuschrist.org/imgs/cea11ee017a94c829c8a630b43be3e369edf4103/full/1280%2C/0/default "
-            },
-            {
+                "https://churchofjesuschrist.org/imgs/cea11ee017a94c829c8a630b43be3e369edf4103/full/1280%2C/0/default"
+        },
+        {
             templeName: "Trujillo Peru Temple",
             location: "Trujillo,La Libertad, Peru",
             dedicated: "2015, June, 21",
             area: 28200,
             imageUrl:
-            "https://www.churchofjesuschrist.org/imgs/d3314069b0111c411c5e21948f4d2d331a98eb3d/full/1920%2C/0/default "
-            },
-            {
+                "https://www.churchofjesuschrist.org/imgs/d3314069b0111c411c5e21948f4d2d331a98eb3d/full/1920%2C/0/default"
+        },
+        {
             templeName: "Oaxaca Mexico Temple",
             location: "Oaxaca, Mexico",
             dedicated: "2000, March, 11",
             area: 10700,
             imageUrl:
-            "https://www.churchofjesuschrist.org/imgs/581374a61f8732d11ebff1496246465905078e11/full/1920%2C/0/default "
-            },
+                "https://www.churchofjesuschrist.org/imgs/581374a61f8732d11ebff1496246465905078e11/full/1920%2C/0/default"
+        }
     ];
 
     const galeriaContainer = document.getElementById("galeria-container");
 
-    temples.forEach(temple => {
-        const figure = document.createElement("figure");
-        const img = document.createElement("img");
-        const figcaption = document.createElement("figcaption");
+    // Función para mostrar templos
+    function displayTemples(filteredTemples) {
+        galeriaContainer.innerHTML = ""; // Limpiar el contenedor
+        filteredTemples.forEach(temple => {
+            const figure = document.createElement("figure");
+            const img = document.createElement("img");
+            const figcaption = document.createElement("figcaption");
 
-        img.src = temple.imageUrl;
-        img.alt = temple.templeName;
-        figcaption.textContent = temple.templeName;
+            img.src = temple.imageUrl;
+            img.alt = temple.templeName;
+            figcaption.textContent = `${temple.templeName} (${temple.location})`;
 
-        figure.appendChild(img);
-        figure.appendChild(figcaption);
-        galeriaContainer.appendChild(figure);
+            figure.appendChild(img);
+            figure.appendChild(figcaption);
+            galeriaContainer.appendChild(figure);
+        });
+    }
+
+    // Mostrar todos los templos inicialmente
+    displayTemples(temples);
+
+    // Filtrar templos según el menú
+    document.querySelectorAll("#menu a").forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+            const filter = link.dataset.filter;
+
+            let filteredTemples = [];
+            if (filter === "all") {
+                filteredTemples = temples; // Mostrar todos los templos
+            } else if (filter === "old") {
+                filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
+            } else if (filter === "new") {
+                filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
+            } else if (filter === "large") {
+                filteredTemples = temples.filter(temple => temple.area > 90000);
+            } else if (filter === "small") {
+                filteredTemples = temples.filter(temple => temple.area < 10000);
+            }
+
+            displayTemples(filteredTemples); // Mostrar los templos filtrados
+        });
     });
 };

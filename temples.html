@@ -1,19 +1,24 @@
 <!doctype html>
 <html lang="en-US">
+    <!--So sorry the a lot comments but I need to know what myself was thinking to do this parts and 
+understand better my code and so sorry that I type that in Spanish but I need understand me, I use and apply
+the code that I understand by videos of Youtube in Spanish so sorry my issues-->
     <head>
         <script src="scripts/temples.js" defer></script>
         <title>WDD 131 - Fundamentos de la Web dinámica - Alfonso Habana Rosales</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="WDD 131 - Fundamentos Web Dinámicos,I'm Alfonso Hababa Rosales, I stuidy in BYU, this page is my practice to learn HTML,CSS and Javascripts code.">
+        <meta name="description" content="WDD 131 - Fundamentos Web Dinámicos, I'm Alfonso Hababa Rosales, I study in BYU, this page is my practice to learn HTML, CSS and JavaScript code.">
         <meta name="author" content="Alfonso Habana Rosales">
-        <link rel="stylesheet" href="styles/temples.css">
-        
-
+        <!-- Aquí se cargará el CSS dinámicamente -->
+        <link id="dynamic-css" rel="stylesheet" href="">
     </head>
     <body>
         <header>
+
             <h1>Temple Album</h1>
+            <!--Aqui mi boton-->
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
             <nav>
                 <ul>
                     <li><a href="https://alfonsohr6.github.io/wdd131/temples.html">Home</a></li>
@@ -27,7 +32,6 @@
         <main>
             <h2> Home</h2>
             <div class="galeria">
-
                 <figure><img src="images/templo1.jpg" alt="Aba Nigeria Temple"><figcaption>Aba Nigeria Temple</figcaption></figure>
                 <figure><img src="images/templo2.jpg" alt="Albuquerque New Mexico Temple"><figcaption>Albuquerque New Mexico Temple</figcaption></figure>
                 <figure><img src="images/templo3.jpg" alt="Mexico City Mexico Temple"><figcaption>Mexico City Mexico Temple</figcaption></figure>
@@ -37,10 +41,7 @@
                 <figure><img src="images/templo7.jpg" alt="Kirtland Ohio Temple"><figcaption>Kirtland Ohio Temple</figcaption></figure>
                 <figure><img src="images/templo8.jpg" alt="Logan Utah Temple"><figcaption>Logan Utah Temple</figcaption></figure>
                 <figure><img src="images/templo9.jpg" alt="Trujillo Peru Temple"><figcaption>Trujillo Peru Temple</figcaption></figure>
-
-
             </div>
-
         </main>
         <footer>
             <p>©️ <span id="currentYear"></span></p>

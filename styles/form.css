@@ -12,6 +12,8 @@ body {
     line-height: 1.6;
 }
 
+
+
 /* Estilo para el encabezado */
 header {
     background-color: #4CAF50;
@@ -64,7 +66,19 @@ textarea {
 
 /* Estilo para los botones de radio */
 input[type="radio"] {
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* Espacio entre el botón y su etiqueta */
+}
+
+/* Contenedor de los botones de radio */
+div.radio-group {
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Alinear verticalmente los elementos */
+    gap: 1rem; /* Espacio uniforme entre los elementos */
+}
+
+/* Etiquetas de los botones de radio */
+div.radio-group label {
+    margin-right: 1rem; /* Espacio entre cada par de botón y etiqueta */
 }
 
 /* Estilo para las casillas de verificación */

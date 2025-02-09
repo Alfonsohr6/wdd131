@@ -97,3 +97,45 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+
+/* Media Query para pantallas pequeñas (móviles en vertical) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Reducir el tamaño de fuente para móviles */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Tamaño de título más pequeño */
+    }
+
+    main {
+        max-width: 100%; /* Ocupar todo el ancho disponible */
+        padding: 0.5rem; /* Reducir el relleno */
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho */
+        padding: 0.5rem; /* Reducir el relleno */
+    }
+}
+
+/* Media Query para móviles en orientación horizontal */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 16px; /* Aumentar ligeramente el tamaño de fuente */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Tamaño de título intermedio */
+    }
+
+    main {
+        max-width: 80%; /* Ajustar el ancho máximo */
+        padding: 1rem; /* Mantener un relleno adecuado */
+    }
+
+    input[type="submit"] {
+        width: auto; /* Restaurar el ancho automático */
+        padding: 0.75rem 1.5rem; /* Restaurar el relleno original */
+    }
+}

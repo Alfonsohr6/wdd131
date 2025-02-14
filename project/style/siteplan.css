@@ -1,42 +1,42 @@
-
-/*Edicion del encavezado*/
+/* Edición del encabezado */
 header {
     display: flex;
     flex-direction: column;
     background-color: plum;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     color: #fff;
     text-align: center;
-  }
+}
 
 /* Navegación (menú desplegable) */
 nav ul {
     display: none; /* Ocultar el menú por defecto */
     list-style-type: none;
     padding: 0;
-  }
-  
-  nav ul.active {
+    margin: 0;
+}
+
+nav ul.active {
     display: block; /* Mostrar el menú cuando esté activo */
-  }
-  
-  nav a {
+}
+
+nav a {
     display: block;
     color: #fff;
     padding: 1rem;
     text-decoration: none;
     background-color: plum;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     text-decoration: overline;
-  }
-  
-  /* Mostrar el botón de menú en celulares */
-  .menu-button {
-    display: block;
+}
+
+/* Botón de menú desplegable */
+#menuToggle {
+    display: none; /* Ocultar el botón en pantallas grandes */
     background-color: plum;
     color: #fff;
     text-align: center;
@@ -44,20 +44,21 @@ nav ul {
     cursor: pointer;
     border: none;
     font-size: 1.5rem; /* Tamaño del ícono */
-  }
-  
-  .menu-icon {
+}
+
+.menu-icon {
     font-size: 1.5rem; /* Ajusta el tamaño del ícono */
-  }
-  
-  .contenenedor {
+}
+
+/* Contenedor principal */
+.contenedor {
     position: relative; /* Necesario para posicionar las secciones dentro del contenedor */
     width: 100%;
     height: 100vh; /* La altura de la página será del 100% de la ventana */
     overflow: hidden; /* Evitar desbordamientos */
 }
 
-  .imagen-fondo {
+.imagen-fondo {
     position: absolute;
     top: 0;
     left: 0;
@@ -88,13 +89,39 @@ nav ul {
 
 /* Estilos para el iframe */
 iframe {
-    width: 100%; 
-    height: 450px; 
-    border: none; 
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    transition: transform 0.3s ease; /* Animación suave al interactuar */
+}
+
+iframe:hover {
+    transform: scale(1.02); /* Efecto de zoom al pasar el mouse */
 }
 
 /* Media query para pantallas pequeñas (celulares) */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    #menuToggle {
+        display: block; /* Mostrar el botón en celulares */
+    }
+
+    nav ul {
+        display: none; /* Ocultar el menú inicialmente */
+        flex-direction: column;
+        background-color: plum;
+        position: absolute;
+        top: 50px; /* Debajo del botón */
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex; /* Mostrar el menú cuando esté activo */
+    }
+
     .seccion-izquierda,
     .seccion-derecha {
         position: static; /* Eliminar el posicionamiento absoluto */
@@ -103,10 +130,8 @@ iframe {
     }
 }
 
-
-/*Esto es el pie de pagina*/
-footer { 
-
+/* Esto es el pie de página */
+footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;

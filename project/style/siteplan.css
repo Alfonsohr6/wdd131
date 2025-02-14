@@ -49,6 +49,13 @@ nav ul {
   .menu-icon {
     font-size: 1.5rem; /* Ajusta el tamaño del ícono */
   }
+  
+  .contenenedor {
+    position: relative; /* Necesario para posicionar las secciones dentro del contenedor */
+    width: 100%;
+    height: 100vh; /* La altura de la página será del 100% de la ventana */
+    overflow: hidden; /* Evitar desbordamientos */
+}
 
   .imagen-fondo {
     position: absolute;
@@ -77,6 +84,13 @@ nav ul {
 .seccion-derecha {
     bottom: 20px; /* Posición inferior derecha */
     right: 20px;
+}
+
+/* Estilos para el iframe */
+iframe {
+    width: 100%; 
+    height: 450px; 
+    border: none; 
 }
 
 /* Media query para pantallas pequeñas (celulares) */

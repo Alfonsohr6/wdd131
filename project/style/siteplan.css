@@ -32,17 +32,6 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* Botón de menú */
-.menu-button {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-
 
 /* Contenedor principal */
 .contenedor {

@@ -11,7 +11,13 @@
 </head>
 <body>
     <header>
+        <!-- Título principal -->
         <h1><a href="siteplan.html">Zumpango</a></h1>
+
+        <!-- Botón de menú desplegable para dispositivos móviles -->
+        <button id="menuToggle" class="menu-button">☰ Menu</button>
+
+        <!-- Menú de navegación -->
         <nav>
             <ul id="navMenu">
                 <li><a href="activity.html">Activity</a></li>
@@ -20,22 +26,37 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <div class="contenedor">
+            <!-- Imagen de fondo -->
             <img src="images/barrio.jpg" alt="Barrio Zumpango" class="imagen-fondo">
+
+            <!-- Sección izquierda -->
             <section class="seccion-izquierda">
                 <p>Come join us at the chapel we meet every Sunday at 9 am.</p>
             </section>
+
+            <!-- Sección derecha con el mapa -->
             <section class="seccion-derecha">
+                <!-- Contenedor del mapa -->
                 <div id="map"></div>
-                <a href="https://maps.app.goo.gl/HRVJtSiynUPMdddMA"><p class="nos">55600 Zumpango de Ocampo, Méx.</p></a>
+
+                <!-- Enlace al mapa -->
+                <a href="https://maps.app.goo.gl/HRVJtSiynUPMdddMA" target="_blank">
+                    <p class="nos">55600 Zumpango de Ocampo, Méx.</p>
+                </a>
             </section>
         </div>
     </main>
+
     <footer>
         <p>©️ <span id="currentYear"></span></p>
         <p>Barrio Zumpango, Pagina NO OFICIAL</p>
         <p><span id="lastModified"></span></p>
     </footer>
+
+    <!-- Script de Google Maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_DE_API&callback=initMap"></script>
 </body>
 </html>

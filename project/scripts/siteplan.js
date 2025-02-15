@@ -1,11 +1,32 @@
+// Función para inicializar el mapa de Google Maps
+function initMap() {
+    const zumpango = { lat: 19.826759, lng: -99.134028 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: zumpango,
+    });
+    new google.maps.Marker({
+        position: zumpango,
+        map: map,
+        title: "Zumpango, México",
+    });
+}
+
+// Función para actualizar el año actual y la última modificación
 window.onload = function () {
     // Obtener el año actual
-    const currentYear = new Date().getFullYear();
-    document.getElementById("currentYear").innerHTML = currentYear;
+    const currentYearElement = document.getElementById("currentYear");
+    if (currentYearElement) {
+        const currentYear = new Date().getFullYear();
+        currentYearElement.innerHTML = currentYear;
+    }
 
     // Mostrar la última modificación
-    const lastModified = document.lastModified;
-    document.getElementById("lastModified").innerHTML = "Last updated: " + lastModified;
+    const lastModifiedElement = document.getElementById("lastModified");
+    if (lastModifiedElement) {
+        const lastModified = document.lastModified;
+        lastModifiedElement.innerHTML = "Last updated: " + lastModified;
+    }
 
     // Menú desplegable
     const menuToggle = document.getElementById("menuToggle");
@@ -73,25 +94,16 @@ window.onload = function () {
                 event.preventDefault();
                 const textToCopy = this.getAttribute("href").replace("mailto:", "");
 
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    alert(`Copied to clipboard: ${textToCopy}`);
-                }).catch(err => {
-                    console.error("Failed to copy text: ", err);
-                });
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        alert(`Copied to clipboard: ${textToCopy}`);
+                    }).catch(err => {
+                        console.error("Failed to copy text: ", err);
+                    });
+                } else {
+                    alert("Your browser does not support clipboard operations.");
+                }
             });
         });
     }
 };
-
-function initMap() {
-    const zumpango = { lat: 19.826759, lng: -99.134028 };
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: zumpango,
-    });
-    new google.maps.Marker({
-        position: zumpango,
-        map: map,
-        title: "Zumpango, México",
-    });
-}

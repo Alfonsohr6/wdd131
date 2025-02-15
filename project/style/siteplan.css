@@ -1,5 +1,4 @@
 /* Edición del encabezado */
-/* Estilo del encabezado */
 header {
     display: flex;
     justify-content: space-between;
@@ -32,6 +31,15 @@ nav ul li a {
     font-size: 16px;
 }
 
+/* Botón de menú desplegable */
+.menu-button {
+    display: none; /* Ocultar el botón por defecto */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 /* Contenedor principal */
 .contenedor {
@@ -70,13 +78,13 @@ nav ul li a {
     right: 20px;
 }
 
-/* Estilos para el iframe */
-iframe {
+
+/* Estilo del mapa */
+#map {
     width: 100%;
     height: 450px;
-    border: none;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease; /* Animación suave al interactuar */
 }
 
@@ -95,9 +103,12 @@ iframe:hover {
         margin-bottom: 10px;
     }
 
+    .menu-button {
+        display: block; /* Mostrar el botón en celulares */
+    }
 
     nav ul {
-        display: none;
+        display: none; /* Ocultar el menú inicialmente */
         flex-direction: column;
         background-color: plum;
         position: absolute;
@@ -108,15 +119,15 @@ iframe:hover {
     }
 
     nav ul.active {
-        display: flex;
+        display: flex; /* Mostrar el menú cuando esté activo */
     }
-}
 
     .seccion-izquierda,
     .seccion-derecha {
         position: static; /* Eliminar el posicionamiento absoluto */
         margin: 20px auto; /* Centrar las secciones */
         width: 90%; /* Ancho ajustado para celulares */
+    }
 }
 
 /* Esto es el pie de página */
@@ -124,4 +135,63 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilo específico para la galería de actividades */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 300px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo específico para la tabla de la biblioteca */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: plum;
+    color: white;
+}
+
+/* Estilo específico para los contactos */
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: plum;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }

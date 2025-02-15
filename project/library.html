@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <script src="scripts/siteplan.js" defer></script>
+    <title>Library Inventory - Zumpango</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Inventory of books and resources available in the Zumpango library.">
+    <meta name="author" content="Alfonso Habana Rosales">
+    <link rel="stylesheet" href="style/siteplan.css">
+</head>
+<body>
+    <header>
+        <h1><a href="siteplan.html">Zumpango</a></h1>
+        <button id="menuToggle" class="menu-button">☰ Menu</button>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="activity.html">Activity</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor">
+            <section class="seccion-izquierda">
+                <h2>Inventario de la Biblioteca</h2>
+                <p>Busca libros por título, autor o categoría:</p>
+                <input type="text" id="searchInput" placeholder="Search books...">
+            </section>
+            <section class="seccion-derecha">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Great Gatsby</td>
+                            <td>F. Scott Fitzgerald</td>
+                            <td>Fiction</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>To Kill a Mockingbird</td>
+                            <td>Harper Lee</td>
+                            <td>Fiction</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>1984</td>
+                            <td>George Orwell</td>
+                            <td>Science Fiction</td>
+                            <td>7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>©️ <span id="currentYear"></span></p>
+        <p>Barrio Zumpango, Pagina NO OFICIAL</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

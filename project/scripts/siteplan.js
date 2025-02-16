@@ -29,14 +29,34 @@ window.onload = function () {
     }
 
     // Menú desplegable
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", function () {
-            navMenu.classList.toggle("active");
+if (menuToggle && navMenu) {
+    // Alternar el menú al hacer clic en el botón
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+
+    // Cerrar el menú cuando se hace clic fuera de él
+    document.addEventListener("click", function (event) {
+        const isClickInsideMenu = navMenu.contains(event.target);
+        const isClickOnButton = menuToggle.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnButton) {
+            navMenu.classList.remove("active");
+        }
+    });
+
+    // Permitir que los enlaces sean clicables sin cerrar el menú inmediatamente
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            // Opcional: Cierra el menú después de hacer clic en un enlace
+            navMenu.classList.remove("active");
         });
-    }
+    });
+}
 
     // Filtrar actividades (solo en activity.html)
     if (document.querySelector(".gallery")) {

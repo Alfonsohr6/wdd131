@@ -306,6 +306,7 @@ table tr:hover {
         display: block; /* Mostrar el botón en celulares */
     }
 
+
     nav ul {
         display: none; /* Ocultar el menú inicialmente */
         flex-direction: column;
@@ -319,6 +320,23 @@ table tr:hover {
 
     nav ul.active {
         display: flex; /* Mostrar el menú cuando esté activo */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado entre los elementos del menú */
+    }
+
+    nav ul li a {
+        color: white;
+        font-size: 18px; /* Tamaño de fuente más grande para celulares */
+        padding: 10px;
+        display: block;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscuro para mejorar la legibilidad */
+        border-radius: 5px;
+    }
+    nav ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.2); /* Efecto hover */
     }
 
     .seccion-izquierda,

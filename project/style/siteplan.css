@@ -3,14 +3,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(54,116,181);
+    background-color: rgb(54, 116, 181);
     padding: 10px 20px;
 }
 
 header h1 {
     margin: 0;
     color: #fff;
-    font-size: 24px;
+    font-size: 2rem; /* Tamaño más grande para mejorar la visibilidad */
+    text-transform: uppercase; /* Opcional: Hacer el texto en mayúsculas para destacarlo */
+}
+
+header h1 a {
+    color: #fff; /* Mantener el color blanco para el enlace */
+    text-decoration: none; /* Eliminar la subrayación del enlace */
 }
 
 /* Estilo del menú */
@@ -107,7 +113,7 @@ nav ul li a {
 }
 
 .filter-bar .filter-button:hover {
-    background-color:rgb(54,116,181); /* Cambia el color al pasar el mouse */
+    background-color: rgb(54, 116, 181); /* Cambia el color al pasar el mouse */
     color: white;
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
@@ -170,7 +176,7 @@ table td {
 }
 
 table th {
-    background-color: rgb(161,227,249);
+    background-color: rgb(161, 227, 249);
     color: white;
     font-weight: bold;
 }
@@ -191,7 +197,7 @@ table tr:hover {
 
 .contact-header h2 {
     font-size: 2rem;
-    color: rgb(54,116,181);
+    color: rgb(54, 116, 181);
     margin-bottom: 10px;
 }
 
@@ -233,7 +239,7 @@ table tr:hover {
 
 .contact-info a {
     text-decoration: none;
-    color: rgb(209,248,239);
+    color: rgb(209, 248, 239);
     font-weight: bold;
 }
 
@@ -248,7 +254,7 @@ table tr:hover {
 
 .contact-form h3 {
     font-size: 1.8rem;
-    color: rgb(209,248,239);
+    color: rgb(209, 248, 239);
     margin-bottom: 20px;
 }
 
@@ -279,7 +285,7 @@ table tr:hover {
     margin-top: 15px;
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: rgb(54,116,181);
+    background-color: rgb(54, 116, 181);
     color: white;
     border: none;
     border-radius: 5px;
@@ -288,7 +294,7 @@ table tr:hover {
 }
 
 .contact-form button:hover {
-    background-color: rgb(87,143,202);
+    background-color: rgb(87, 143, 202);
 }
 
 /* Media query para pantallas pequeñas (celulares) */
@@ -299,6 +305,7 @@ table tr:hover {
     }
 
     header h1 {
+        font-size: 1.8rem; /* Tamaño más grande para celulares */
         margin-bottom: 10px;
     }
 
@@ -306,11 +313,10 @@ table tr:hover {
         display: block; /* Mostrar el botón en celulares */
     }
 
-
     nav ul {
         display: none; /* Ocultar el menú inicialmente */
         flex-direction: column;
-        background-color: rgb(54,116,181);
+        background-color: rgb(54, 116, 181);
         position: absolute;
         top: 50px;
         left: 0;
@@ -335,6 +341,7 @@ table tr:hover {
         background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscuro para mejorar la legibilidad */
         border-radius: 5px;
     }
+
     nav ul li a:hover {
         background-color: rgba(0, 0, 0, 0.2); /* Efecto hover */
     }
@@ -353,5 +360,5 @@ footer {
     border-top: 1px solid #000;
     text-align: center;
     padding: 10px 0;
-    background-color: rgb(161,227,249);
+    background-color: rgb(161, 227, 249);
 }

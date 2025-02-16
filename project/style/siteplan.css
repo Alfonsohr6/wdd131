@@ -3,7 +3,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: plum;
+    background-color: rgb(54,116,181);
     padding: 10px 20px;
 }
 
@@ -107,7 +107,7 @@ nav ul li a {
 }
 
 .filter-bar .filter-button:hover {
-    background-color: plum; /* Cambia el color al pasar el mouse */
+    background-color:rgb(54,116,181); /* Cambia el color al pasar el mouse */
     color: white;
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
@@ -170,7 +170,7 @@ table td {
 }
 
 table th {
-    background-color: plum;
+    background-color: rgb(161,227,249);
     color: white;
     font-weight: bold;
 }
@@ -191,7 +191,7 @@ table tr:hover {
 
 .contact-header h2 {
     font-size: 2rem;
-    color: plum;
+    color: rgb(54,116,181);
     margin-bottom: 10px;
 }
 
@@ -233,7 +233,7 @@ table tr:hover {
 
 .contact-info a {
     text-decoration: none;
-    color: plum;
+    color: rgb(209,248,239);
     font-weight: bold;
 }
 
@@ -248,7 +248,7 @@ table tr:hover {
 
 .contact-form h3 {
     font-size: 1.8rem;
-    color: plum;
+    color: rgb(209,248,239);
     margin-bottom: 20px;
 }
 
@@ -279,7 +279,7 @@ table tr:hover {
     margin-top: 15px;
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: plum;
+    background-color: rgb(54,116,181);
     color: white;
     border: none;
     border-radius: 5px;
@@ -288,7 +288,7 @@ table tr:hover {
 }
 
 .contact-form button:hover {
-    background-color: #800080;
+    background-color: rgb(87,143,202);
 }
 
 /* Media query para pantallas pequeñas (celulares) */
@@ -310,7 +310,7 @@ table tr:hover {
     nav ul {
         display: none; /* Ocultar el menú inicialmente */
         flex-direction: column;
-        background-color: plum;
+        background-color: rgb(54,116,181);
         position: absolute;
         top: 50px;
         left: 0;
@@ -353,4 +353,5 @@ footer {
     border-top: 1px solid #000;
     text-align: center;
     padding: 10px 0;
+    background-color: rgb(161,227,249);
 }

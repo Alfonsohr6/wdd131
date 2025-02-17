@@ -19,28 +19,29 @@ header h1 a {
     text-decoration: none; /* Eliminar la subrayación del enlace */
 }
 
-/* Estilo del menú desplegable */
+/* Estilo del menú para pantallas grandes */
 nav ul {
-    display: none; /* Ocultar inicialmente */
-    flex-direction: column;
-    background-color: rgb(54, 116, 181);
-    width: 100%;
-    padding: 10px;
-    margin-top: 0; /* Asegurarse de que no haya margen superior */
+    display: flex; /* Mostrar el menú como una lista horizontal */
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px; /* Espaciado entre los elementos del menú */
 }
 
 nav ul li a {
     color: white;
-    font-size: 18px; /* Tamaño de fuente más grande para celulares */
-    padding: 15px; /* Espaciado adicional para facilitar el clic */
-    display: block;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscuro */
-    border-radius: 5px;
+    font-size: 16px; /* Tamaño de fuente adecuado para pantallas grandes */
+    text-decoration: none; /* Eliminar subrayado */
+    padding: 10px; /* Espaciado interno */
+    transition: background-color 0.3s ease; /* Transición suave para el efecto hover */
 }
 
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.2); /* Efecto hover */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 /* Botón de menú desplegable */
@@ -51,10 +52,6 @@ nav ul li a:hover {
     color: #fff;
     font-size: 24px;
     cursor: pointer;
-}
-
-nav ul {
-    transition: all 0.3s ease;
 }
 
 /* Contenedor principal */
@@ -351,18 +348,6 @@ table tr:hover {
 
     nav ul li a:hover {
         background-color: rgba(0, 0, 0, 0.2); /* Efecto hover */
-    }
-
-    /* Ajustar el diseño cuando el menú está activo */
-    nav ul.active + main {
-        margin-top: 200px; /* Mover el contenido principal hacia abajo */
-    }
-
-    .seccion-izquierda,
-    .seccion-derecha {
-        position: static; /* Eliminar el posicionamiento absoluto */
-        margin: 20px auto; /* Centrar las secciones */
-        width: 90%; /* Ancho ajustado para celulares */
     }
 }
 

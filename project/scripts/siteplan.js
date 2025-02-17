@@ -109,15 +109,12 @@ if (menuToggle && navMenu) {
         });
     }
 
-    // Copiar enlaces de contacto (solo en help.html)
     if (document.querySelector(".contact-info")) {
         const contactLinks = document.querySelectorAll(".contact-info a");
-
         contactLinks.forEach(link => {
             link.addEventListener("click", function (event) {
                 event.preventDefault();
                 const textToCopy = this.getAttribute("href").replace("mailto:", "");
-
                 if (navigator.clipboard) {
                     navigator.clipboard.writeText(textToCopy).then(() => {
                         alert(`Copied to clipboard: ${textToCopy}`);

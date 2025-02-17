@@ -53,6 +53,10 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+nav ul {
+    transition: all 0.3s ease;
+}
+
 /* Contenedor principal */
 .contenedor {
     position: relative; /* Necesario para posicionar las secciones dentro del contenedor */

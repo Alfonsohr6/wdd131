@@ -346,6 +346,11 @@ table tr:hover {
         background-color: rgba(0, 0, 0, 0.2); /* Efecto hover */
     }
 
+    /* Ajustar el diseño cuando el menú está activo */
+    nav ul.active + main {
+        margin-top: 200px; /* Mover el contenido principal hacia abajo */
+    }
+
     .seccion-izquierda,
     .seccion-derecha {
         position: static; /* Eliminar el posicionamiento absoluto */

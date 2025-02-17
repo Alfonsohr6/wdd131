@@ -28,7 +28,7 @@ window.onload = function () {
         lastModifiedElement.innerHTML = "Last updated: " + lastModified;
     }
 
-    // Menú desplegable
+// Menú desplegable
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
@@ -36,6 +36,14 @@ if (menuToggle && navMenu) {
     // Alternar el menú al hacer clic en el botón
     menuToggle.addEventListener("click", function () {
         navMenu.classList.toggle("active");
+
+        // Ajustar el contenido principal cuando el menú está activo
+        const mainContent = document.querySelector("main");
+        if (navMenu.classList.contains("active")) {
+            mainContent.style.marginTop = "200px"; // Mover el contenido hacia abajo
+        } else {
+            mainContent.style.marginTop = "0"; // Restaurar el margen original
+        }
     });
 
     // Cerrar el menú cuando se hace clic fuera de él
@@ -45,8 +53,13 @@ if (menuToggle && navMenu) {
 
         if (!isClickInsideMenu && !isClickOnButton) {
             navMenu.classList.remove("active");
+
+            // Restaurar el margen del contenido principal
+            const mainContent = document.querySelector("main");
+            mainContent.style.marginTop = "0";
         }
     });
+}
 
     // Permitir que los enlaces sean clicables sin cerrar el menú inmediatamente
     const navLinks = navMenu.querySelectorAll("a");
@@ -125,5 +138,4 @@ if (menuToggle && navMenu) {
                 }
             });
         });
-    }
-};
+    };

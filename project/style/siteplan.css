@@ -19,22 +19,28 @@ header h1 a {
     text-decoration: none; /* Eliminar la subrayación del enlace */
 }
 
-/* Estilo del menú */
+/* Estilo del menú desplegable */
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
+    display: none; /* Ocultar inicialmente */
+    flex-direction: column;
+    background-color: rgb(54, 116, 181);
+    width: 100%;
+    padding: 10px;
+    margin-top: 0; /* Asegurarse de que no haya margen superior */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
+    color: white;
+    font-size: 18px; /* Tamaño de fuente más grande para celulares */
+    padding: 15px; /* Espaciado adicional para facilitar el clic */
+    display: block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscuro */
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Efecto hover */
 }
 
 /* Botón de menú desplegable */
@@ -317,9 +323,6 @@ table tr:hover {
         display: none; /* Ocultar el menú inicialmente */
         flex-direction: column;
         background-color: rgb(54, 116, 181);
-        position: absolute;
-        top: 50px;
-        left: 0;
         width: 100%;
         padding: 10px;
     }
@@ -335,10 +338,10 @@ table tr:hover {
     nav ul li a {
         color: white;
         font-size: 18px; /* Tamaño de fuente más grande para celulares */
-        padding: 10px;
+        padding: 15px; /* Espaciado adicional para facilitar el clic */
         display: block;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscuro para mejorar la legibilidad */
+        background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscuro */
         border-radius: 5px;
     }
 

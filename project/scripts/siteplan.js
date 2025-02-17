@@ -21,45 +21,36 @@ window.onload = function () {
         currentYearElement.innerHTML = currentYear;
     }
 
-    // Mostrar la última modificación
-    const lastModifiedElement = document.getElementById("lastModified");
-    if (lastModifiedElement) {
-        const lastModified = document.lastModified;
-        lastModifiedElement.innerHTML = "Last updated: " + lastModified;
-    }
-
-// Menú desplegable
+    // En siteplan.js
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
 if (menuToggle && navMenu) {
-    // Alternar el menú al hacer clic en el botón
     menuToggle.addEventListener("click", function () {
         navMenu.classList.toggle("active");
 
-        // Ajustar el contenido principal cuando el menú está activo
+        // Calcular la altura del menú y ajustar el margen del contenido principal
         const mainContent = document.querySelector("main");
         if (navMenu.classList.contains("active")) {
-            mainContent.style.marginTop = "200px"; // Mover el contenido hacia abajo
+            const menuHeight = navMenu.scrollHeight;
+            mainContent.style.marginTop = `${menuHeight}px`;
         } else {
-            mainContent.style.marginTop = "0"; // Restaurar el margen original
+            mainContent.style.marginTop = "0";
         }
     });
 
-    // Cerrar el menú cuando se hace clic fuera de él
+    // Cerrar el menú al hacer clic fuera
     document.addEventListener("click", function (event) {
         const isClickInsideMenu = navMenu.contains(event.target);
         const isClickOnButton = menuToggle.contains(event.target);
 
         if (!isClickInsideMenu && !isClickOnButton) {
             navMenu.classList.remove("active");
-
-            // Restaurar el margen del contenido principal
-            const mainContent = document.querySelector("main");
-            mainContent.style.marginTop = "0";
+            document.querySelector("main").style.marginTop = "0";
         }
     });
-}
+
+
 
     // Permitir que los enlaces sean clicables sin cerrar el menú inmediatamente
     const navLinks = navMenu.querySelectorAll("a");
@@ -138,4 +129,5 @@ if (menuToggle && navMenu) {
                 }
             });
         });
-    };
+    }
+};

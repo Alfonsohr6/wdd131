@@ -1,83 +1,190 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-/*caja para poner limites*/
-.card{
-
-    margin: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1); 
-    padding: 5px;
-    background-color: #ffffff;
-    color: #000;
-    width: auto;
-    
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
 }
 
-.txleft{
-    margin: 10px;
-    border: 1px solid #ffffff; 
-    padding: 5px;
-    background-color: #ffffff;
-    text-align: left;
-
+/* Header principal */
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #ad66ef;
+    color: white;
 }
 
-.txrigth{
-    margin: 10px;
-    border: 1px solid #ffffff; 
-    padding: 5px;
-    background-color: #ffffff;
-    text-align: right;
-}
-
-h2{
-
+header h1 {
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #7a3db8; 
     text-align: center;
 }
 
-section{
-    display: grid;
+header nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/* Estilo de navegación */
+nav {
+    background-color: black;
+    margin: 0 auto;
+    max-width: auto;
 }
 
-.imgrigth{
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
 
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+nav ul li {
+    flex: 1 1 100%;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    text-align: center;
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #333;
+    text-decoration: overline;
+}
+
+/* Contenedor principal para secciones */
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #000;
+}
+
+/* Texto alineado a la izquierda */
+.txleft {
+    margin: 15px 0;
+    text-align: left;
+}
+
+/* Texto alineado a la derecha */
+.txrigth {
+    margin: 15px 0;
+    text-align: right;
+}
+
+/* Título secundario centrado */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Título con estilo de bandera mexicana */
+.bandera-h2 {
+    background: linear-gradient(to right, #006f3d, #fff, #e61e32); /* Verde, Blanco, Rojo */
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px 0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Línea divisoria */
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #000;
+    margin: 25px 0;
+}
+
+/* Imágenes flotantes - ahora con márgenes */
+.imgrigth {
     float: right;
-
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
-.imgleft{
-
+.imgleft {
     float: left;
-
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
-.box1{
-
-    border: 1px solid rgba(0, 0, 0, 0.1); 
-    background-color: #003049;
+/* Encabezado principal con color morado */
+.box1 {
+    border: 2px solid #000;
+    background-color: #ad66ef; /* ✔️ Actualizado al nuevo morado */
     color: aliceblue;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.box2{
+/* Otro estilo de caja */
+.box2 {
     margin: 1rem;
-    border: 1px solid rgb(255, 255, 255); 
+    border: 1px solid rgb(255, 255, 255);
     padding: 1rem;
     background-color: black;
     color: aliceblue;
 }
 
-main{
-
+/* Diseño de main con dos columnas */
+main {
     display: grid;
-    align-items: center;
-
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    min-height: 100vh;
+    margin-top: 20px;
 }
-/*Mis fuentes de txt*/
+
+.left {
+    grid-column: 1 / 2;
+}
+
+.rigth {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+}
+
+/* Tipografía personalizada */
 .romanesco-regular {
     font-family: "Romanesco", system-ui;
     font-weight: 400;
@@ -90,75 +197,26 @@ main{
     font-style: normal;
 }
 
-
-.nosubraya { /*Aqui se quitara el subrayado a los links*/
-
+/* Enlaces sin subrayado */
+.nosubraya {
     text-decoration: none;
-
 }
 
 
-/*Navegacion */
 
-nav {
-	background-color: black;
-	margin: 0 auto;
-	max-width: auto;
-}
-nav ul {
-	list-style-type: none;
-}
-nav a {
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: 1rem;
-	text-decoration: none;
-}
-
-nav a:hover{
-	text-decoration:overline;
-}
-
-.linea{
-    margin-top: 15px;
+/* Línea divisoria */
+.linea {
+    margin-top: 20px;
     border-top: 1px solid #000;
     text-align: left;
 }
 
-.rigth {
-    margin: 10px;
-    padding: 10px;
-    grid-column: 2/2;
-    
-}
-
-.left {
-
-    margin: 10px;
-    padding: 10px;
-    grid-column: 1/2;
-    
-}
-
-
-footer { 
-
-    margin-top: 15px;
-    border-top: 1px solid #000;
+/* Footer con estilo */
+footer {
+    margin-top: 30px;
+    border-top: 2px solid #000;
     text-align: center;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #ad66ef;
 }
-
-nav ul {
-        display: flex;
-    }
-	
-nav ul li  {
-		flex: 1 1 100%;
-	
-    }
-
-
-/*section img {
-    float: right;
-}*/

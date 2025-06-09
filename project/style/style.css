@@ -1,4 +1,5 @@
 
+
 body {
     font-family: Georgia, 'Times New Roman', serif;
     background-color: #f5f5f5;
@@ -37,10 +38,27 @@ ul {
     margin: 5px 0;
 }
 
+/* Estilo de galería de wireframes */
 .wireframe img {
     max-width: 100%;
     height: auto;
     border: 1px solid #ccc;
     border-radius: 6px;
     margin: 10px 0;
+    display: block;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.gallery img {
+    flex: 1 1 40%; /* Ocupa el 40% del espacio disponible */
+    min-width: 200px;
+    max-width: 450px;
+    height: auto;
 }
